@@ -1,0 +1,325 @@
+.about {
+  background-color: var(--dark-grey);
+  color: #ffffff;
+  padding: 4rem 0;
+}
+
+.about-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.about-title {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  color: var(--gold);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-image {
+  text-align: center;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 15px;
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.2),
+    0 0 0 5px var(--gold);
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.about-image-container {
+  text-align: center;
+  perspective: 1000px;
+}
+
+.about-image-wrapper {
+  display: inline-block;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.about-image-wrapper:hover {
+  transform: rotateY(5deg) rotateX(5deg);
+}
+
+.about-image-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: 5%;
+  bottom: 5%;
+  background: var(--gold);
+  border-radius: 15px;
+  transform: translateZ(-50px);
+  filter: blur(20px);
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.about-image-wrapper:hover::before {
+  filter: blur(30px);
+  opacity: 0.7;
+}
+
+.about-image-wrapper:hover .profile-photo {
+  transform: translateZ(20px);
+  box-shadow: 
+    0 15px 30px rgba(0, 0, 0, 0.3),
+    0 0 0 5px var(--gold);
+}
+
+.about-text p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.skills-section {
+  margin-top: 3rem;
+}
+
+.skills-section h3 {
+  font-family: 'Merriweather', serif;
+  font-size: 1.8rem;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.skill-item {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+
+.skill-item::before {
+  content: attr(data-skill);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--gold);
+  color: var(--dark-grey);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-item:hover::before {
+  opacity: 1;
+}
+
+.skill-badge {
+  height: 28px;
+}
+
+.cta-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.btn {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background-color: var(--gold);
+  color: var(--dark-grey);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--gold);
+  border: 2px solid var(--gold);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-photo {
+    max-width: 200px;
+    margin-bottom: 1rem;
+  }
+
+  .skills-container {
+    justify-content: center;
+  }
+}
+
+.skills-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  background-color: var(--light-grey);
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.toggle-btn {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.toggle-btn.active {
+  background-color: var(--gold);
+  color: var(--dark-grey);
+  border-radius: 6px;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.technical-skills,
+.soft-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.soft-skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--light-grey);
+  border-radius: 8px;
+  padding: 1rem;
+  min-width: 150px;
+  height: 60px;
+  transition: all 0.3s ease;
+}
+
+.soft-skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+.soft-skill-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--gold);
+}
+
+.toggle-label {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+  color: var(--light-grey);
+  transition: color 0.3s ease;
+}
+
+.toggle-label.active {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.skills-container {
+  overflow: hidden;
+}
+
+.skills-slider {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 200%;
+}
+
+.skills-slider.slide-left {
+  transform: translateX(-50%);
+}
+
+.technical-skills,
+.soft-skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.soft-skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--light-grey);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 120px;
+  height: 120px;
+  transition: all 0.3s ease;
+}
+
+.soft-skill-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+.soft-skill-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.soft-skill-name {
+  font-family: 'Raleway', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--gold);
+}
