@@ -15,10 +15,9 @@ export default function Hero() {
 
   return (
     <div className="hero">
-      {/* Background Image Container */}
       <div className="hero-background"></div>
 
-      {/* Navbar */}
+      /* Navbar */
       <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <div className="navbar-logo">
           <h1>Pizza Perfection</h1>
@@ -32,7 +31,7 @@ export default function Hero() {
         </div>
       </nav>
 
-      {/* Hero Content */}
+      /* Hero */
       <div className="hero-content">
         <h1 className="hero-title">
           Cooked to <span className="highlight">Perfection</span>
