@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Hero.css";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -20,10 +21,12 @@ export default function Hero() {
       /* Navbar */
       <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
         <div className="navbar-logo">
-          <h1>Pizza Perfection</h1>
+          <h1>Tamir's Restaurant</h1>
         </div>
         <div className="navbar-links">
-          <a href="#menu">Menu</a>
+          <Link to="/menu">
+          Menu
+          </Link>
           <a href="#about">About</a>
           <a href="#locations">Locations</a>
           <a href="#contact">Contact</a>

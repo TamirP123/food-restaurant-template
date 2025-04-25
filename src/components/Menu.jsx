@@ -85,7 +85,7 @@ const Menu = () => {
 
   const MenuSection = ({ title, items }) => (
     <div className="menu-section" data-aos="fade-up">
-      <h2>{title}</h2>
+      <h2 href="menu">{title}</h2>
       <div className="menu-grid">
         {items.map((item, index) => (
           <div
