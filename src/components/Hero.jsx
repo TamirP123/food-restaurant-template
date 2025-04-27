@@ -1,40 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "../styles/Hero.css";
-import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 export default function Hero() {
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
     <div className="hero">
       <div className="hero-background"></div>
-
-      /* Navbar */
-      <nav className={`navbar ${isScrolled ? "scrolled" : ""}`}>
-        <div className="navbar-logo">
-          <h1>Tamir's Restaurant</h1>
-        </div>
-        <div className="navbar-links">
-          <Link to="/menu">
-          Menu
-          </Link>
-          <a href="#about">About</a>
-          <a href="#locations">Locations</a>
-          <a href="#contact">Contact</a>
-          <button className="btn btn-primary">Order Now</button>
-        </div>
-      </nav>
-
-      /* Hero */
+      <Navbar isHomePage={true} />
       <div className="hero-content">
         <h1 className="hero-title">
           Cooked to <span className="highlight">Perfection</span>

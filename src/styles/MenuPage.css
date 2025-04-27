@@ -1,0 +1,166 @@
+.menu-page {
+  padding-top: 80px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 2rem 2rem 2rem;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.menu-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+              url('../assets/pizza-bg.jpg') center/cover;
+  border-radius: 8px;
+}
+
+.menu-header h1 {
+  font-size: 2.5rem;
+  color: #d63031;
+  margin-bottom: 1rem;
+  font-family: 'Georgia', serif;
+}
+
+.menu-header p {
+  font-size: 1.2rem;
+  color: #666;
+  font-style: italic;
+}
+
+.menu-notice {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  text-align: center;
+  border: 2px dashed #d63031;
+}
+
+.menu-notice p {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.menu-category {
+  margin-bottom: 3rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.menu-category h2 {
+  color: #d63031;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #d63031;
+}
+
+.menu-items {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.menu-item {
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: #f8f9fa;
+  transition: transform 0.2s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-3px);
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.item-header h3 {
+  font-size: 1.3rem;
+  color: #2d3436;
+}
+
+.prices {
+  display: flex;
+  gap: 1rem;
+  color: #d63031;
+  font-weight: bold;
+}
+
+.price {
+  color: #d63031;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.menu-item p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.base-prices, .toppings {
+  background-color: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+}
+
+.base-prices h4, .toppings h4 {
+  color: #2d3436;
+  margin-bottom: 0.5rem;
+}
+
+.toppings p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.menu-footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.menu-footer p {
+  margin: 0.5rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .menu-page {
+    padding: 1rem;
+  }
+
+  .menu-header h1 {
+    font-size: 2rem;
+  }
+
+  .prices {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .item-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
