@@ -27,7 +27,6 @@ export default function Navbar({ isHomePage }) {
       </div>
       <div className="navbar-links">
         <Link to="/menu">Menu</Link>
-        <a href="#about">About</a>
         <a href="#locations">Locations</a>
         <a href="#contact">Contact</a>
         <button className="btn btn-primary">Order Now</button>
