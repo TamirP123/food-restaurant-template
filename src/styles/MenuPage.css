@@ -3,24 +3,27 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 80px 2rem 2rem 2rem;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Merriweather', serif;
   color: #333;
+  background-color: #fafafa;
 }
 
 .menu-header {
   text-align: center;
   margin-bottom: 3rem;
-  padding: 2rem 0;
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+  padding: 3rem 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
               url('../assets/pizza-bg.jpg') center/cover;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 .menu-header h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   color: #d63031;
   margin-bottom: 1rem;
-  font-family: 'Georgia', serif;
+  font-family: 'Italiana', serif;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .menu-header p {
@@ -30,137 +33,222 @@
 }
 
 .menu-notice {
-  background-color: #f8f9fa;
-  padding: 1rem;
-  border-radius: 8px;
-  margin-bottom: 2rem;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 3rem;
   text-align: center;
   border: 2px dashed #d63031;
+  font-family: 'Arial', sans-serif;
 }
 
 .menu-notice p {
   margin: 0.5rem 0;
   font-size: 1.1rem;
-  color: #666;
+  color: #555;
 }
 
 .menu-category {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   background: white;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
 }
 
 .menu-category h2 {
   color: #d63031;
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: 'Italiana', serif;
+  position: relative;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid #d63031;
+}
+
+.menu-category h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #d63031;
 }
 
 .menu-items {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .menu-item {
-  padding: 1rem;
-  border-radius: 6px;
-  background-color: #f8f9fa;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
   transition: transform 0.2s ease;
 }
 
-.menu-item:hover {
-  transform: translateY(-3px);
+.menu-item:last-child {
+  border-bottom: none;
+}
+.item-content {
+  padding: 0.5rem 0;
 }
 
-.item-header {
+.item-name-price {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
-.item-header h3 {
-  font-size: 1.3rem;
+.item-name-price h3 {
+  font-size: 1.4rem;
   color: #2d3436;
+  font-family: 'Merriweather', serif;
 }
 
-.prices {
+.size-price {
   display: flex;
-  gap: 1rem;
-  color: #d63031;
-  font-weight: bold;
+  gap: 1.5rem;
+  font-family: 'Arial', sans-serif;
 }
 
-.price {
+.size-price div {
+  display: flex;
+  align-items: center;
+    gap: 0.5rem;
+  color: #666;
+  }
+
+.size-price span {
   color: #d63031;
   font-weight: bold;
-  font-size: 1.1rem;
 }
 
 .menu-item p {
   color: #666;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-.base-prices, .toppings {
-  background-color: #f8f9fa;
-  padding: 1rem;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-}
-
-.base-prices h4, .toppings h4 {
-  color: #2d3436;
-  margin-bottom: 0.5rem;
-}
-
-.toppings p {
-  color: #666;
+  font-size: 1rem;
   line-height: 1.6;
-}
+  font-family: 'Arial', sans-serif;
+  }
 
-.menu-footer {
-  text-align: center;
-  margin-top: 3rem;
-  padding: 1rem;
-  background-color: #f8f9fa;
+/* Build Your Own Pizza Section */
+.build-your-own {
+  background: #f9f9f9;
+  padding: 2rem;
   border-radius: 8px;
 }
 
-.menu-footer p {
-  margin: 0.5rem 0;
+.size-price-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.size-price-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.size-price-item .size {
+  display: block;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.size-price-item .price {
+  color: #d63031;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.includes-text {
+  text-align: center;
   color: #666;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+.toppings-section {
+  margin-top: 2rem;
+}
+
+.toppings-section h4 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toppings-section h4 span {
+  color: #d63031;
   font-size: 0.9rem;
+}
+
+.toppings-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.topping-category h5 {
+  color: #333;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.topping-category ul {
+  list-style: none;
+  padding: 0;
+}
+
+.topping-category li {
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-family: 'Arial', sans-serif;
 }
 
 @media (max-width: 768px) {
   .menu-page {
-    padding: 1rem;
+    padding: 60px 1rem 1rem;
   }
 
   .menu-header h1 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
-  .prices {
-    flex-direction: column;
-    gap: 0.3rem;
+  .menu-category {
+    padding: 1.5rem;
   }
 
-  .item-header {
+  .item-name-price {
     flex-direction: column;
-    text-align: center;
-    gap: 0.5rem;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .size-price {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .size-price-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .toppings-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .menu-items {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
   }
 }

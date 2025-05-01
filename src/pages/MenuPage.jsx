@@ -14,9 +14,9 @@ function MenuPage() {
 
         <div className="menu-notice">
           <p>
-            🍕 All pizzas available in Small (12"), Medium (14"), or Large (16")
+            All pizzas available in Small (12"), Medium (14"), or Large (16")
           </p>
-          <p>🚗 Free delivery on orders over $25 within 3 miles</p>
+          <p>Free delivery on orders over $25 within 3 miles</p>
         </div>
 
         <div className="menu-content">
@@ -24,62 +24,120 @@ function MenuPage() {
             <h2>Specialty Pizzas</h2>
             <div className="menu-items">
               <div className="menu-item">
-                <div className="item-header">
-                  <h3>The South Philly Special</h3>
-                  <div className="prices">
-                    <span>S: $16.99</span>
-                    <span>M: $19.99</span>
-                    <span>L: $22.99</span>
+                <div className="item-content">
+                  <div className="item-name-price">
+                    <h3>The South Philly Special</h3>
+                    <div className="size-price">
+                      <div>
+                        S <span>$16.99</span>
+                      </div>
+                      <div>
+                        M <span>$19.99</span>
+                      </div>
+                      <div>
+                        L <span>$22.99</span>
+                      </div>
+                    </div>
                   </div>
+                  <p>
+                    Italian sausage, bell peppers, onions, mushrooms, extra
+                    cheese
+                  </p>
                 </div>
-                <p>
-                  Italian sausage, bell peppers, onions, mushrooms, extra cheese
-                </p>
               </div>
 
               <div className="menu-item">
-                <div className="item-header">
-                  <h3>Margherita</h3>
-                  <div className="prices">
-                    <span>S: $14.99</span>
-                    <span>M: $17.99</span>
-                    <span>L: $20.99</span>
+                <div className="item-content">
+                  <div className="item-name-price">
+                    <h3>Margherita</h3>
+                    <div className="size-price">
+                      <div>
+                        S <span>$14.99</span>
+                      </div>
+                      <div>
+                        M <span>$17.99</span>
+                      </div>
+                      <div>
+                        L <span>$20.99</span>
+                      </div>
+                    </div>
                   </div>
+                  <p>Fresh mozzarella, basil, olive oil, fresh tomatoes</p>
                 </div>
-                <p>Fresh mozzarella, basil, olive oil, fresh tomatoes</p>
               </div>
-
               <div className="menu-item">
-                <div className="item-header">
-                  <h3>Meat Lovers</h3>
-                  <div className="prices">
-                    <span>S: $17.99</span>
-                    <span>M: $20.99</span>
-                    <span>L: $23.99</span>
+                <div className="item-content">
+                  <div className="item-name-price">
+                    <h3>Meat Lovers</h3>
+                    <div className="size-price">
+                      <div>
+                        S <span>$17.99</span>
+                      </div>
+                      <div>
+                        M <span>$20.99</span>
+                      </div>
+                      <div>
+                        L <span>$23.99</span>
+                      </div>
+                    </div>
                   </div>
+                  <p>Pepperoni, sausage, bacon, ground beef, ham</p>
                 </div>
-                <p>Pepperoni, sausage, bacon, ground beef, ham</p>
               </div>
             </div>
           </section>
 
           <section className="menu-category">
             <h2>Build Your Own Pizza</h2>
-            <div className="base-prices">
-              <h4>Base Prices (includes cheese and sauce)</h4>
-              <div className="prices">
-                <span>Small: $12.99</span>
-                <span>Medium: $14.99</span>
-                <span>Large: $16.99</span>
+            <div className="build-your-own">
+              <div className="base-prices">
+                <h4>Base Prices</h4>
+                <div className="size-price-grid">
+                  <div className="size-price-item">
+                    <span className="size">Small (12")</span>
+                    <span className="price">$12.99</span>
+                  </div>
+                  <div className="size-price-item">
+                    <span className="size">Medium (14")</span>
+                    <span className="price">$14.99</span>
+                  </div>
+                  <div className="size-price-item">
+                    <span className="size">Large (16")</span>
+                    <span className="price">$16.99</span>
+                  </div>
+                </div>
+                <p className="includes-text">
+                  Includes our signature sauce and fresh mozzarella
+                </p>
               </div>
-            </div>
-            <div className="toppings">
-              <h4>Toppings ($1.50 each)</h4>
-              <p>
-                Pepperoni • Sausage • Mushrooms • Onions • Bell Peppers • Black
-                Olives • Extra Cheese • Bacon • Ham • Ground Beef • Pineapple •
-                Jalapeños
-              </p>
+
+              <div className="toppings-section">
+                <h4>
+                  Premium Toppings <span>$1.50 each</span>
+                </h4>
+                <div className="toppings-grid">
+                  <div className="topping-category">
+                    <h5>Meats</h5>
+                    <ul>
+                      <li>Pepperoni</li>
+                      <li>Italian Sausage</li>
+                      <li>Bacon</li>
+                      <li>Ham</li>
+                      <li>Ground Beef</li>
+                    </ul>
+                  </div>
+                  <div className="topping-category">
+                    <h5>Veggies</h5>
+                    <ul>
+                      <li>Mushrooms</li>
+                      <li>Bell Peppers</li>
+                      <li>Onions</li>
+                      <li>Black Olives</li>
+                      <li>Jalapeños</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
