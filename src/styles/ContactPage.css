@@ -1,0 +1,259 @@
+.contact-page {
+  padding: 80px 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Merriweather', serif;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem 0;
+}
+
+.contact-header h1 {
+  font-size: 3rem;
+  color: #d63031;
+  margin-bottom: 1rem;
+  font-family: 'Italiana', serif;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  color: #666;
+  font-style: italic;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.contact-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.primary-card {
+  background: #d63031;
+  color: white;
+}
+
+.primary-card h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Italiana', serif;
+}
+
+.phone-number {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.phone-number a {
+  color: white;
+  font-size: 1.8rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.delivery-info {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.order-btn {
+  background: white;
+  color: #d63031;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.order-btn:hover {
+  transform: translateY(-2px);
+}
+
+.info-card h3 {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Merriweather', serif;
+}
+
+.location-info, .hours-info {
+  display: flex;
+  gap: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.icon {
+  color: #d63031;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.primary-card .icon {
+  color: white;
+}
+
+.amenities {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.amenity {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: #666;
+}
+
+.hours-grid {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+}
+
+.day-hours {
+  display: flex;
+  justify-content: space-between;
+  color: #666;
+}
+
+.day {
+  font-weight: bold;
+}
+
+.contact-form-section {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.form-card {
+  padding: 2rem;
+}
+
+.form-card h3 {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  font-family: 'Merriweather', serif;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: #333;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background: #d63031;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #c72c2c;
+  transform: translateY(-2px);
+}
+
+.map-section {
+  margin-top: 4rem;
+}
+
+.map-section h3 {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-family: 'Merriweather', serif;
+}
+
+.map-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+@media (max-width: 968px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-header h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 60px 1rem 2rem;
+  }
+
+  .contact-header h1 {
+    font-size: 2rem;
+  }
+
+  .phone-number a {
+    font-size: 1.5rem;
+  }
+
+  .day-hours {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+}

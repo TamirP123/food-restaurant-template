@@ -22,13 +22,12 @@ export default function Navbar({ isHomePage }) {
     >
       <div className="navbar-logo">
         <Link to="/">
-          <h1>Tamir's Restaurant</h1>
+          <h1>Tamir's Pizza</h1>
         </Link>
       </div>
       <div className="navbar-links">
         <Link to="/menu">Menu</Link>
-        <a href="#locations">Locations</a>
-        <a href="#contact">Contact</a>
+        <a href="/contact">Contact</a>
         <button className="btn btn-primary">Order Now</button>
       </div>
     </nav>
